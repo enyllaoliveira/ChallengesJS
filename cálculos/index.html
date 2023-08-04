@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculos</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <section class=" blue" >
+        <div>
+            <div class="container">
+                <h1> Calculadora </h1>
+                <div class="information calculator">
+                    <table>
+                        <div id="resultCalculator"></div>
+                        <tr>
+                            <td> <button class="btnCalculator" onclick="clean()">C</button></td>
+                            <td> <button class="btnCalculator" onclick="back()"><</button></td>
+                            <td> <button class="btnCalculator" onclick="insert('/')">/</button></td>
+                            <td> <button class="btnCalculator" onclick="insert('*')">X</button></td>
+                        </tr>
+                        <tr>
+                            <td> <button class="btnCalculator" onclick="insert('7')">7</button></td>
+                            <td> <button class="btnCalculator" onclick="insert('8')">8</button></td>
+                            <td> <button class="btnCalculator" onclick="insert('9')">9</button></td>
+                            <td> <button class="btnCalculator" onclick="insert('-')">-</button></td>
+                        </tr>
+                        <tr>
+                            <td> <button class="btnCalculator" onclick="insert('4')">4</button></td>
+                            <td> <button class="btnCalculator" onclick="insert('5')">5</button></td>
+                            <td> <button class="btnCalculator" onclick="insert('6')">6</button></td>
+                            <td> <button class="btnCalculator" onclick="insert('+')" >+</button></td>
+                        </tr>
+                        <tr>
+                            <td> <button class="btnCalculator" onclick="insert('1')">1</button></td>
+                            <td> <button class="btnCalculator" onclick="insert('2')">2</button></td>
+                            <td> <button class="btnCalculator" onclick="insert('3')">3</button></td>
+                            <td rowspan="2"> <button class="btnCalculator" style="height:110px" onclick="calculate()">=</button></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"> <button class="btnCalculator" style="width: 145px" onclick="insert('0')" >0</button></td>
+                            <td> <button class="btnCalculator" onclick="insert('.')">.</button></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<section class="picture">
+<div class="container">
+    <h1> Tabuada - Soma </h1>
+    <div class="information">
+        <input type="text" id="numberSum1" placeholder="Digite o número">
+                <input type="text" id="numberSum2" placeholder="Digite o número">
+                <input type="text" id="numberSum3" placeholder="Digite o número">
+                <input type="text" id="numberSum4" placeholder="Digite o número">
+                <input type="text" id="numberSum5" placeholder="Digite o número">
+                <input type="text" id="numberSum6" placeholder="Digite o número">
+                <button id="button"> Calcular a tabuada</button>
+                <div id="resultSum"> </div>
+    </div>
+</div>
+</section>
+
+<section class=" blue">
+    <div>
+        <div class="container">
+            <h1> Tabuada - Multiplicação </h1>
+            <div class="information">
+                <input type="number" id="number" placeholder="Digite o número da tabuada">
+                <button id="btn"> Calcular </button>
+                <div id="result"> </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="picture">
+    <div class="container">
+        <h1> Cálculo - Ajuste salarial </h1>
+        <div class="information">
+                <input type="text" id="name" placeholder="Nome do(a) colaborador(a)">
+                <input type="number" id="oldSalary" placeholder="Salário Atual">
+                <button id="btn2"> Seu novo salário </button>
+                <div id="resultpayment"> </div>
+        </div> 
+    </div>
+</section>
+
+<script src="index.js"></script>
+</body>
+</html>
