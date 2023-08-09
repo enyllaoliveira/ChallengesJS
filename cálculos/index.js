@@ -134,30 +134,32 @@ button.addEventListener('click', calcular)
         resultSum.innerHTML = acumulador;
 }
 
-btn2.addEventListener('click', calculo)
+btn2.addEventListener('click', calculo);
 function calculo() {
-let oldSalaryConvertido = Number(oldSalary.value)
-if(oldSalaryConvertido < 280) {
-    percentage = 0.20;
+    let oldSalaryConvertido = Number(oldSalary.value);
+    let salaryConvertido = new Intl.NumberFormat('pt-BR', {
+        style: 'currency',
+        currency: 'BRL',
+        maximumFractionDigits: 2
+    }).format(oldSalaryConvertido);
+    // console.log(salaryConvertido)
+
+
+    if (oldSalaryConvertido < 280) {
+        percentage = 0.20;
+    } else if (oldSalaryConvertido > 280 && oldSalaryConvertido < 700) {
+        percentage = 0.15;
+    } else if (oldSalaryConvertido > 700 && oldSalaryConvertido < 1500) {
+        percentage = 0.1;
+    } else {
+        percentage = 0.05;
+    }
+
     increase = oldSalaryConvertido * percentage;
     newSalary = increase + oldSalaryConvertido;
-} else if(oldSalaryConvertido > 280 && oldSalaryConvertido < 700) {
-    percentage = 0.15;
-    increase = oldSalaryConvertido * percentage;
-    newSalary = increase + oldSalaryConvertido;    
-} else if(oldSalaryConvertido > 700 && oldSalaryConvertido < 1500) {
-    percentage = 0.1;
-    increase = oldSalaryConvertido * percentage;
-    newSalary = increase + oldSalaryConvertido;    
-} else {
-    percentage = 0.05;
-    increase = oldSalaryConvertido * percentage;
-    newSalary = increase + oldSalaryConvertido;   
-}
-resultpayment.innerHTML = `<p> Olá, ${name.value}.</p>
- <p>Seu salário antigo era de R$${oldSalaryConvertido},00.</p>
- <p> O percentual do seu aumento será de ${percentage}%.</p>
- <p> O seu novo salário será de R$${newSalary},00. </p>`
-}
 
-
+    resultpayment.innerHTML = `<p> Olá, ${name.value}.</p>
+    <p>Seu salário antigo era de ${oldSalaryConvertido}.</p>
+    <p> O percentual do seu aumento será de ${(percentage * 100).toFixed(2)}%.</p>
+    <p> O seu novo salário será de ${newSalary}. </p>`;
+}

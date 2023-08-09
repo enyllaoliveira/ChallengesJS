@@ -9,13 +9,11 @@
 </head>
 <body>
 
-    <section class=" blue" >
-        <div>
-            <div class="container">
-                <h1> Calculadora </h1>
-                <div class="information calculator">
+    <section class="blue">           
+                <div class="information" id= "container">
+                    <h1> Calculadora </h1>
                     <table>
-                        <div id="resultCalculator"></div>
+                        <div  id="resultCalculator"></div>
                         <tr>
                             <td> <button class="btnCalculator" onclick="clean()">C</button></td>
                             <td> <button class="btnCalculator" onclick="back()"><</button></td>
@@ -46,14 +44,11 @@
                         </tr>
                     </table>
                 </div>
-            </div>
-        </div>
     </section>
 
 <section class="picture">
-<div class="container">
-    <h1> Tabuada - Soma </h1>
-    <div class="information">
+<div class="informationPicture" id="container">
+        <h1> Tabuada - Soma </h1>
         <input type="text" id="numberSum1" placeholder="Digite o número">
                 <input type="text" id="numberSum2" placeholder="Digite o número">
                 <input type="text" id="numberSum3" placeholder="Digite o número">
@@ -62,32 +57,25 @@
                 <input type="text" id="numberSum6" placeholder="Digite o número">
                 <button id="button"> Calcular a tabuada</button>
                 <div id="resultSum"> </div>
-    </div>
 </div>
 </section>
 
 <section class=" blue">
-    <div>
-        <div class="container">
+        <div class="information" id="container">
             <h1> Tabuada - Multiplicação </h1>
-            <div class="information">
                 <input type="number" id="number" placeholder="Digite o número da tabuada">
                 <button id="btn"> Calcular </button>
                 <div id="result"> </div>
-            </div>
         </div>
-    </div>
 </section>
 
 <section class="picture">
-    <div class="container">
+    <div class="informationPicture" id="container">
         <h1> Cálculo - Ajuste salarial </h1>
-        <div class="information">
-                <input type="text" id="name" placeholder="Nome do(a) colaborador(a)">
-                <input type="number" id="oldSalary" placeholder="Salário Atual">
+                <input type="text" id="name"  placeholder="Nome do(a) colaborador(a)">
+                <input type="text" id="oldSalary" placeholder="Salário Atual">
                 <button id="btn2"> Seu novo salário </button>
                 <div id="resultpayment"> </div>
-        </div> 
     </div>
 </section>
 
